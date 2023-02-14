@@ -1,0 +1,108 @@
+.about{
+    margin-top: 3rem;
+}
+.achcontain{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+.achright p{
+    margin: 1.6rem 0 2.5rem;
+}
+.achcards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+.achcard{
+    background: #5b09a2;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+.achcard:hover{
+    background: #690dca;
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0,0.3);
+}
+.achicon{
+    padding: 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    background: red;
+    font-size: 2rem;
+}
+.achcard p{
+    margin-top: 1rem;
+}
+
+.team{
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0,0.5);
+}
+.teamcontain{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+.teammem{
+    background: #690dca;
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+.teammem:hover{
+    background: transparent;
+    border-color: var(--clr-blue);
+}
+.teammem img{
+    filter: saturate(0);
+}
+.teammem:hover img{
+    filter: saturate(1);
+}
+.meminfo{
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+@media screen and (max-width:1024px){
+    .about{
+        margin-top: 2rem;
+    }
+    .achcontain{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .achleft{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .teamcontain{
+        grid-template-columns: repeat(3,1fr);
+        gap: 1.5rem;
+    }
+    .teammem{
+        padding: 1rem;
+    }
+    
+}
+
+@media screen and (max-width:600px){
+    .achcard{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .teamcontain{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .teammem{
+        padding: 0;
+    }
+    .teammem p{
+        margin-bottom: 1.5rem;
+    }
+}
